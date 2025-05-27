@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #130351;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#quiz-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#finished-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    padding: 20px;
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 5px;
+}
+#restart-button{
+    display: block;
+    background-color: #48b7e3;
+    color: white;
+    align-content: center;
+    border: none;
+    width: 20%;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn{
+    background-color: #d1d7d1;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 16px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 19px;
+    display: flex;
+    justify-content: flex-start;
+}
+#center-container h1 {
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+#center-container {
+    display: flex;
+    flex-direction: column;
+}
+#finish-container{
+    display: none;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: #a6aba6;
+}
+.btn:active::selection {
+    background-color: #8c9f8c;
+}
+.btn:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#Title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}

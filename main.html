@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question preparation</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
+</head>
+<body>
+    <div id="center-container">
+        <h1>Welcome to the Pop Quiz</h1>
+        <div id="quiz-container">
+            <p id="Title"><b>Warm Up Before Study</b></p>
+            <hr>
+            <div id="question-container">
+                <br>
+                <p id="question">Question text will go here</p>
+                <div id="answers" class="btn-container">
+                    <button id="answer1" class="btn" onclick="selectAnswer(0)">Answer 1</button>
+                    <button id="answer2" class="btn" onclick="selectAnswer(1)">Answer 2</button>
+                    <button id="answer3" class="btn" onclick="selectAnswer(2)">Answer 3</button>
+                    <button id="answer4" class="btn" onclick="selectAnswer(3)">Answer 4</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <span style="font-size:20px; color: Red; display: flex; justify-content: center;">Notice!!! after one click wait for 2 seconds to get the next question</span>
+    </div>
+    <div id="finish-container">
+        <div class="hidden">
+            <h2>🎊Congrats on completing the quiz!🎊</h2>
+            <br>
+            <p id="score"><br>
+                You did great—keep striving for more!<br> 
+                Every step you take in learning brings you closer to<br>
+                mastering new skills and unlocking future success.<br>
+                🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉</p><br>
+            <button id="restart-button" class="btn1" onclick="loadQuestion()">Restart Quiz</button>
+        </div>
+    </div>
+</body>
+</html>
