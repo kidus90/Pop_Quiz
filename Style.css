@@ -100,3 +100,6 @@ body {
     font-size: 30px;
     margin-bottom: 10px;
 }
+#quiz {
+    display: none;
+}
