@@ -29,15 +29,6 @@
             ];
 
             $file = 'questions.json';
-            if (file_exists($file)) {
-                $json = file_get_contents($file);
-                $questions = json_decode($json, true);
-                if (!is_array($questions)) {
-                    $questions = [];
-                }
-            } else {
-                $questions = [];
-            }
             $questions[] = $questionData;
             file_put_contents($file, json_encode($questions, JSON_PRETTY_PRINT));
             echo "<p style='color:green;'>Question added successfully!</p>";
@@ -51,6 +42,7 @@
             
             <div class="form_question">
                 <form id="Quiz-Question" method="GET">
+                    <button type="button" class="back-btn" onclick="Back()">&#8592;Back</button>
                     <label for="question">Question:</label>
                     <input type="text" id="question" name="form_question" required><br>
                     
@@ -66,7 +58,7 @@
                     <label for="answer4">Answer 4:</label>
                     <input type="text" id="id_answer4" name="form_answer4" required><br>
 
-                    <label for="correct-answer">Correct Answer:</label>
+                    <label for="correct-answer">Correct Answer Number:</label>
                     <input type="number" id="id_correct-answer" name="form_correct-answer" required><br>
                     
                     <button type="submit">Submit Question</button>
@@ -74,11 +66,14 @@
             </div>
 
             <div id="quiz">
-                <p id="Title"><b>Warm Up Before Study</b></p>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p id="Title"><b>Warm Up Before Study</b></p>
+                    <button class="add" type="button" onclick="showFormQuestion()" style="border: none; border-radius: 5px; padding: 12px 12px; cursor: pointer; margin-bottom: 4px">➕</button>    
+                </div>    
                 <hr>
                 <div id="question-container">
                     <br>
-                    <p id="question">Question text will go here</p>
+                    <p id="text_question">Question text will go here</p>
                     <div id="answers" class="btn-container">
                         <button id="answer1" class="btn" onclick="selectAnswer(0)">Answer 1</button>
                         <button id="answer2" class="btn" onclick="selectAnswer(1)">Answer 2</button>

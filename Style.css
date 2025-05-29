@@ -72,7 +72,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-#finish-container{
+#finish-container {
     display: none;
     background-color: white;
     border-radius: 10px;
@@ -92,7 +92,7 @@ body {
     outline: 2px solid #000000;
     outline-offset: 2px;
 }
-#question {
+#text_question {
     font-size: 24px;
     margin-bottom: 20px;
 }
@@ -101,5 +101,70 @@ body {
     margin-bottom: 10px;
 }
 #quiz {
+    display: flex;
+    flex-direction: column;
+}
+.form_question {
     display: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#Quiz-Question {
+    background: #f8fafd;
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+}
+
+#Quiz-Question label {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+#Quiz-Question input[type="text"],
+#Quiz-Question input[type="number"] {
+    padding: 7px 12px;
+    border-radius: 6px;
+    border: 1px solid #bdbdbd;
+    font-size: 15px;
+    margin-bottom: 10px;
+    transition: border 0.2s;
+}
+
+#Quiz-Question input[type="text"]:focus,
+#Quiz-Question input[type="number"]:focus {
+    border: 1.5px solid #48b7e3;
+    outline: none;
+}
+
+#Quiz-Question button[type="submit"] {
+    background: #48b7e3;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+#Quiz-Question button[type="submit"]:hover {
+    background: #309ac2;
+}
+.back-btn {
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+.back-btn:hover {
+    background: #bdbdbd;
 }

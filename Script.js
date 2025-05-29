@@ -3,7 +3,7 @@ let currentQuestionIndex = 0;
 
 function loadQuestion() {
     if (questions.length === 0) return;
-    const questionElement = document.getElementById("question");
+    const questionElement = document.getElementById("text_question");
     questionElement.textContent = questions[currentQuestionIndex].question;
     document.getElementById(`finish-container`).style.display = "none";
     document.getElementById(`center-container`).style.display = "flex";
@@ -38,6 +38,16 @@ function nextQuestion() {
         document.getElementById(`finish-container`).style.display = "flex";
         document.getElementById(`center-container`).style.display = "none";
     }
+}
+
+function Back() {
+    document.getElementById('quiz').style.display = 'flex';
+    document.querySelector('.form_question').style.display = 'none';
+}
+
+function showFormQuestion() {
+    document.getElementById('quiz').style.display = 'none';
+    document.querySelector('.form_question').style.display = 'flex';
 }
 
 // Fetch questions from JSON file
