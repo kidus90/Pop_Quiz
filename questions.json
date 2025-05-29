@@ -20,16 +20,6 @@
         "correct": 2
     },
     {
-        "question": "Who wrote 'To Kill a Mockingbird'?",
-        "answers": [
-            "Harper Lee",
-            "Mark Twain",
-            "Ernest Hemingway",
-            "F. Scott Fitzgerald"
-        ],
-        "correct": 0
-    },
-    {
         "question": "What is the chemical symbol for water?",
         "answers": [
             "H2O",
@@ -48,25 +38,5 @@
             "Saturn"
         ],
         "correct": 1
-    },
-    {
-        "question": "what's this",
-        "answers": [
-            "this ",
-            "that",
-            "them",
-            "u r gay"
-        ],
-        "correct": 4
-    },
-    {
-        "question": "what's this",
-        "answers": [
-            "this ",
-            "that",
-            "them",
-            "u r gay"
-        ],
-        "correct": 4
     }
 ]

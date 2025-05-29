@@ -8,33 +8,41 @@
     <script src="Script.js" defer></script>
 </head>
 <body>
-    <?php 
-        if (
-                isset($_GET['question']) &&
-                isset($_GET['answer1']) &&
-                isset($_GET['answer2']) &&
-                isset($_GET['answer3']) &&
-                isset($_GET['answer4']) &&
-                isset($_GET['correct-answer'])
-            ) {
-            $questionData = [
-                "question" => $_GET['form_question'],
-                "answers" => [
-                    $_GET['form_answer1'],
-                    $_GET['form_answer2'],
-                    $_GET['form_answer3'],
-                    $_GET['form_answer4']
-                ],
-                "correct" => intval($_GET['form_correct-answer'])
-            ];
+    <?php
+    if (
+        isset($_GET['form_question']) &&
+        isset($_GET['form_answer1']) &&
+        isset($_GET['form_answer2']) &&
+        isset($_GET['form_answer3']) &&
+        isset($_GET['form_answer4']) &&
+        isset($_GET['form_correct-answer'])
+    ) {
+        $questionData = [
+            "question" => $_GET['form_question'],
+            "answers" => [
+                $_GET['form_answer1'],
+                $_GET['form_answer2'],
+                $_GET['form_answer3'],
+                $_GET['form_answer4']
+            ],
+            "correct" => intval($_GET['form_correct-answer']) - 1 // 0-based index
+        ];
 
-            $file = 'questions.json';
-            $questions[] = $questionData;
-            file_put_contents($file, json_encode($questions, JSON_PRETTY_PRINT));
-            echo "<p style='color:green;'>Question added successfully!</p>";
+        $file = 'questions.json';
+        if (file_exists($file)) {
+            $json = file_get_contents($file);
+            $questions = json_decode($json, true);
+            if (!is_array($questions)) {
+                $questions = [];
+            }
+        } else {
+            $questions = [];
         }
-    ?>
-    
+        $questions[] = $questionData;
+        file_put_contents($file, json_encode($questions, JSON_PRETTY_PRINT));
+    }
+?>
+
     <div id="center-container">
         
         <h1>Welcome to the Pop Quiz</h1>
