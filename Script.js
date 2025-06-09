@@ -50,8 +50,7 @@ function showFormQuestion() {
     document.querySelector('.form_question').style.display = 'flex';
 }
 
-// Fetch questions from JSON file
-fetch('questions.json')
+fetch('main.php?get_questions=1')
     .then(response => response.json())
     .then(data => {
         questions = data;
